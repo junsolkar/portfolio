@@ -31,6 +31,30 @@ const useStyles = makeStyles(theme=>({
                 right:'auto'
             }
         }
+    },
+    timelineYear:{
+        textAlign:'center',
+        maxWidth:'9.375rem',
+        margin:'0 3rem 0 auto',
+        fontSize:'1.8rem',
+        background:'tomato',
+        color:'white',
+        lineHeight:1,
+        padding:'0.5rem 0 1rem',
+        "&:before": {
+            display:'none'
+        },
+        [theme.breakpoints.up("md")]:{
+            textAlign:'center',
+            margin:'0 auto',
+            "&:nth-of-type(2n)": {
+                float:'none',
+                margin:'0 auto',
+            },
+            "&:nth-of-type(2n):before": {
+                display:'none'
+            },
+        }
     }
 }));
 const Resume = () => {
@@ -43,7 +67,7 @@ const Resume = () => {
                 Work Experience
             </Typography>
             <Box component='div'className={classes.timeline}>
-            <Typography variant='h2'>
+            <Typography variant='h2'className={classes.timelineYear}>
                 2019
             </Typography>
         </Box>
