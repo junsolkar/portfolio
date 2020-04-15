@@ -38,12 +38,16 @@ const useStyles = makeStyles(theme=>({
         position:"relative",
         margin:"1rem 3rem 1rem 1rem",
         clear: "both",
+        "&:after":{
+            content:"''",
+            position:"absolute",
+        },
         "&:before":{
             content:"''",
             position:"absolute",
             right:"-0.625rem",
             top:"calc(50% - 5px)",
-            borderStlye:"solid",
+            borderStyle:"solid",
             borderColor:"tomato tomato transparent transparent",
             borderWidth:"0.625rem",
             transform:"rotate(45deg)",
@@ -61,10 +65,6 @@ const useStyles = makeStyles(theme=>({
                 left:"-0.625rem",
                 borderColor:"transparent transparent tomato tomato"
             },
-        },
-        "&:after":{
-            content:"''",
-            position:"absolute",
         },
     },
     timelineYear:{
